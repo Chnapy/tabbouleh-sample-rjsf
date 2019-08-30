@@ -25,7 +25,7 @@
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
     "strictPropertyInitialization": false,
-    "outDir": "./docs"
+    "outDir": "./build"
   },
   "include": [
     "src"
