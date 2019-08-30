@@ -9,17 +9,25 @@ interface AppProps {
 
 const App: React.FC<AppProps> = ({schema}) => {
   return (
+      <div>
       <div id={'container-h'}>
 
           <Form id={'data-input'}
               schema={schema as JSONSchema6}
-                onChange={d => console.log('change', d)}
-                onSubmit={d => console.log('submit', d)}
-                onError={d => console.log('error', d)} />
+                liveValidate={true}
+                showErrorList={false} />
 
           <pre id="schema-output">
               {JSON.stringify(schema, undefined, '\t')}
           </pre>
+
+      </div>
+
+          <div className={'links'}>
+              <a href={'https://github.com/Chnapy/tabbouleh'}>tabbouleh</a>
+              +
+              <a href={'https://github.com/mozilla-services/react-jsonschema-form'}>react-jsonschema-form</a>
+          </div>
 
       </div>
   );

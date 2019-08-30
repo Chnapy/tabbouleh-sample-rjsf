@@ -44,3 +44,8 @@
 #schema-output::before {
     content: 'Schema';
 }
+
+.links {
+    text-align: center;
+    font-size: 16px;
+}

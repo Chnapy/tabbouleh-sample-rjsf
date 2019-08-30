@@ -22,5 +22,12 @@ Simplified steps:
 // generate the UserData schema
 const schema = Tabbouleh.generateJSONSchema(UserData);
 
-
+// render the form
+ReactDOM.render(<Form
+            schema={schema as JSONSchema6}
+/>, document.getElementById('root'));
 ```
+
+# Alternatives
+
+See also [uniforms](https://github.com/vazco/uniforms).
