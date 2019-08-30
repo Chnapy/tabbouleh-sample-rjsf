@@ -1,26 +1,28 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Form from "react-jsonschema-form";
+import { JSONSchema7, JSONSchema6 } from 'json-schema';
 
-const App: React.FC = () => {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+interface AppProps {
+    schema: JSONSchema7;
 }
+
+const App: React.FC<AppProps> = ({schema}) => {
+  return (
+      <div id={'container-h'}>
+
+          <Form id={'data-input'}
+              schema={schema as JSONSchema6}
+                onChange={d => console.log('change', d)}
+                onSubmit={d => console.log('submit', d)}
+                onError={d => console.log('error', d)} />
+
+          <pre id="schema-output">
+              {JSON.stringify(schema, undefined, '\t')}
+          </pre>
+
+      </div>
+  );
+};
 
 export default App;
