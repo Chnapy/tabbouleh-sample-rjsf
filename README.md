@@ -1,4 +1,4 @@
-# Tabbouleh sample with AJV validator
+# Tabbouleh sample with react-jsonschema-form form generator
 
 Basic sample which combine [tabbouleh](https://github.com/Chnapy/tabbouleh) (JSON Schema generation) with [react-jsonschema-form](https://github.com/mozilla-services/react-jsonschema-form) (form generation).
 
